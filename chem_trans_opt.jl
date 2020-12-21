@@ -12,15 +12,15 @@ Random.seed!(42)
 x_low_high = rand(Uniform(0.0, 10.0), n_grades) #  this is our cost 
 y_low_high = rand(Uniform(0.0, 10.0), n_grades)
 
-plot(x_low_high, y_low_high, seriestype = :scatter, title = "'Distances'")
+plot(x_low_high, y_low_high, seriestype=:scatter, title="'Distances'")
 
-x_perterbation = rand(Uniform(1.0,1.5),n_grades)
+x_perterbation = rand(Uniform(1.0, 1.5), n_grades)
 y_perterbation = rand(Uniform(1.0, 1.5), n_grades) 
 
 x_high_low = x_low_high .* x_perterbation
 y_high_low = y_low_high .* y_perterbation
 
-plot!(x_high_low, y_high_low, seriestype = :scatter)
+plot!(x_high_low, y_high_low, seriestype=:scatter)
 # Making the matrix
 # it's easeier thinking of these as cities in 2D so we wil lgenerate the matrix 
 # of costs from these starting points
