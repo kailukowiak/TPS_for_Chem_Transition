@@ -55,8 +55,11 @@ end
 
 # ╔═╡ 5c6132b6-43da-11eb-08bc-a13fd48939e7
 begin
-    plot(x_low_high, y_low_high, seriestype = :scatter, title = "Distances",
-		 lab = "Grade")
+    plot(x_low_high, 
+    y_low_high, 
+    seriestype = :scatter, 
+    title = "Distances", 
+    lab = "Grade")
     plot!(x_low_high, y_low_high, lab = "Random Order Path")
 end
 
@@ -147,7 +150,7 @@ of that cost. The highest transition cost values (farthest cities) are set to ze
 """
 function make_matrix_one_way(A::AbstractMatrix; idx = nothing)
     max_possible = sum(A)
-	if idx == nothing
+	if idx === nothing
 		idx = argmax(A)
 	end
     id1, id2 = idx[1], idx[2]
